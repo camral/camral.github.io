@@ -1,0 +1,4 @@
+User-agent: * 
+Disallow: /assets
+
+Sitemap: https://camral.github.io/sitemap.xml
