@@ -24,6 +24,12 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <style>
+        /* Paper thumbnails: cap size when stacked above the title on narrow screens */
+        @media (max-width: 767.98px) {
+            .pub-thumb img { max-width: 216px; width: 100%; }  /* = side-by-side size at md (720px container / 3 - gutter) */
+        }
+    </style>
 </head>
 
 <body>
@@ -57,23 +63,11 @@
         </div>
     </nav>
     <section class="py-5">
-        <div class="container mb-5 mt-4 text-center">
-            <div class="d-flex justify-content-center gap-3 flex-wrap fs-5">
-                <a href="#team-1" class="text-decoration-none fw-semibold" style="color: var(--bs-primary);">Computer
-                    Architecture Codesign</a>
-                <span class="text-muted">|</span>
-                <a href="#team-3" class="text-decoration-none fw-semibold" style="color: var(--bs-primary);">Whole-body
-                    robot control</a>
-                <span class="text-muted">|</span>
-                <a href="#team" class="text-decoration-none fw-semibold" style="color: var(--bs-primary);">Stanford
-                    Collaborations</a>
-            </div>
-        </div>
         <div class="container">
             <div class="row align-items-center mt-3 mb-5 rounded py-3" id="natcomm" style="scroll-margin-top: 90px; background-color: #FFF3CD; border-left: 6px solid #dc3545;">
-                <div class="col-md-3"><img class="rounded img-fluid" src="assets/img/collaborators/ssp_bo_teaser.png"
+                <div class="col-md-4 col-lg-3 mb-2 mb-md-0 pub-thumb"><img class="rounded img-fluid" src="assets/img/collaborators/ssp_bo_teaser.png"
                         alt="Teaser image for paper"></div>
-                <div class="col-md-9">
+                <div class="col-md-8 col-lg-9">
                     <h5 class="fw-bold"><span class="badge bg-danger me-2 align-middle">NEW</span>Compositional Neurosymbolic Representations Enable Efficient Active Exploration</h5>
                     <p class="fw-normal mb-1">P M Furlong*, N S-Y Dumont*, <strong>R Antonova</strong>*, J Orchard, C
                         Eliasmith. <em>Nature Communications, 2026</em></p>
@@ -85,9 +79,9 @@
                 </div>
             </div>
             <div class="row align-items-center mt-3 mb-5 rounded py-3" id="rqgm" style="scroll-margin-top: 90px; background-color: #FFF3CD; border-left: 6px solid #dc3545;">
-                <div class="col-md-3"><img class="rounded img-fluid" src="assets/img/collaborators/rqgm.png"
+                <div class="col-md-4 col-lg-3 mb-2 mb-md-0 pub-thumb"><img class="rounded img-fluid" src="assets/img/collaborators/rqgm.png"
                         alt="Teaser image for paper"></div>
-                <div class="col-md-9">
+                <div class="col-md-8 col-lg-9">
                     <h5 class="fw-bold"><span class="badge bg-danger me-2 align-middle">NEW</span>The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators</h5>
                     <p class="fw-normal mb-2">A Iacob, A Jovanović, W F Shen, D Burkhardt, M Kurmanji, N Tastan, L
                         Sani, N A E Venanzi, <strong>J Nie</strong>, A Odonnat, Z Cao, B Marino, X Qiu, <strong>R
@@ -98,9 +92,9 @@
                 </div>
             </div>
             <div class="row align-items-center mt-3 mb-5 rounded py-3" id="codesigngym" style="scroll-margin-top: 90px; background-color: #FFF3CD; border-left: 6px solid #dc3545;">
-                <div class="col-md-3"><img class="rounded img-fluid" src="assets/img/collaborators/codesigngym.jpg"
+                <div class="col-md-4 col-lg-3 mb-2 mb-md-0 pub-thumb"><img class="rounded img-fluid" src="assets/img/collaborators/codesigngym.jpg"
                         alt="Teaser image for paper"></div>
-                <div class="col-md-9">
+                <div class="col-md-8 col-lg-9">
                     <h5 class="fw-bold"><span class="badge bg-danger me-2 align-middle">NEW</span>Co-Design Gym: A Unified Benchmark for Embodiment-Policy Co-optimization</h5>
                     <p class="fw-normal mb-2"><strong>A Newatia, Y Tsvetkov</strong>, L Pleiss, A Spielberg,
                         <strong>R Antonova</strong>. <em>Preprint, arXiv:2610.02366, 2026</em></p>
@@ -121,6 +115,21 @@
                             </svg>Website&nbsp;</a></div>
                 </div>
             </div>
+        </div>
+        <div class="container mt-4 text-center">
+            <div class="d-flex justify-content-center flex-wrap column-gap-3 row-gap-1 fs-5">
+                <a href="#team-1" class="text-decoration-none fw-semibold" style="color: var(--bs-primary);">Computer
+                    Architecture Codesign</a>
+                <span class="text-muted">|</span>
+                <a href="#team-3" class="text-decoration-none fw-semibold" style="color: var(--bs-primary);">Whole-body
+                    Robot Control</a>
+                <span class="text-muted">|</span>
+                <a href="#team" class="text-decoration-none fw-semibold" style="color: var(--bs-primary);">Stanford
+                    Collaborations</a>
+            </div>
+        </div>
+        <div class="container">
+            <hr class="my-5" style="opacity: 1;background: var(--bs-primary);height: 5px;color: var(--bs-primary);">
         </div>
         <div class="container" id="team-1">
             <div class="row justify-content-center mx-auto">
@@ -143,9 +152,9 @@
                 </div>
             </div>
             <div class="row align-items-center mt-3 mb-5">
-                <div class="col-md-3"><img class="rounded img-fluid" src="assets/img/collaborators/kernelcraft.jpg"
+                <div class="col-md-4 col-lg-3 mb-2 mb-md-0 pub-thumb"><img class="rounded img-fluid" src="assets/img/collaborators/kernelcraft.jpg"
                         alt="Teaser image for paper" style="background: #ee582d;"></div>
-                <div class="col-md-9">
+                <div class="col-md-8 col-lg-9">
                     <h5 class="fw-bold">KernelCraft: Benchmarking for Agentic Close-to-Metal Kernel Generation on
                         Emerging Hardware</h5>
                     <p class="fw-normal mb-2"><strong>J Nie</strong>, H Wu, Y Lai, Z Cao, C Zhang, B Lou, E Wang, J
@@ -161,9 +170,9 @@
                 </div>
             </div>
             <div class="row align-items-center mt-3 mb-5">
-                <div class="col-md-3"><img class="rounded img-fluid" src="assets/img/collaborators/memory_wall.png"
+                <div class="col-md-4 col-lg-3 mb-2 mb-md-0 pub-thumb"><img class="rounded img-fluid" src="assets/img/collaborators/memory_wall.png"
                         alt="Teaser image for paper"></div>
-                <div class="col-md-9">
+                <div class="col-md-8 col-lg-9">
                     <h5 class="fw-bold">Combating the Memory Walls: Optimization Pathways for Long-Context Agentic LLM
                         Inference</h5>
                     <p class="fw-normal mb-2">H Wu, C Xiao, <strong>J Nie</strong>, X Guo, B Lou, J&nbsp; T H Wong, Z
@@ -178,9 +187,9 @@
                 </div>
             </div>
             <div class="row align-items-center mt-3 mb-5">
-                <div class="col-md-3"><img class="rounded img-fluid" src="assets/img/collaborators/beyond_gemm.png"
+                <div class="col-md-4 col-lg-3 mb-2 mb-md-0 pub-thumb"><img class="rounded img-fluid" src="assets/img/collaborators/beyond_gemm.png"
                         alt="Teaser image for paper" style="background: #ee582d;"></div>
-                <div class="col-md-9">
+                <div class="col-md-8 col-lg-9">
                     <h5 class="fw-bold">NPU Design for Diffusion Language Model Inference</h5>
                     <p class="fw-normal mb-2">B Lou, H Wu, K Lau, G MacDonald, <strong>J Nie</strong>, Y Lai, C Xiao, X
                         Guo, J Cheng, <strong>R Antonova</strong>, R Mullins, A Zhao. <em>Preprint, arXiv:2601.20706,
@@ -191,9 +200,9 @@
                 </div>
             </div>
             <div class="row align-items-center mt-3 mb-5">
-                <div class="col-md-3"><img class="rounded img-fluid" src="assets/img/collaborators/memexplorer.png"
+                <div class="col-md-4 col-lg-3 mb-2 mb-md-0 pub-thumb"><img class="rounded img-fluid" src="assets/img/collaborators/memexplorer.png"
                         alt="Teaser image for paper" style="background: #ee582d;"></div>
-                <div class="col-md-9">
+                <div class="col-md-8 col-lg-9">
                     <h5 class="fw-bold">MemExplorer: Navigating the Heterogeneous Memory Design Space for Agentic
                         Inference NPUs</h5>
                     <p class="fw-normal mb-2">H Wu, Z Cao, Y Lai, B Lou, <strong>J Nie</strong>, C Xiao, T Adeniran, P
@@ -205,9 +214,9 @@
                 </div>
             </div>
             <div class="row align-items-center mt-3 mb-5">
-                <div class="col-md-3"><img class="rounded img-fluid" src="assets/img/collaborators/pip.png"
+                <div class="col-md-4 col-lg-3 mb-2 mb-md-0 pub-thumb"><img class="rounded img-fluid" src="assets/img/collaborators/pip.png"
                         alt="Teaser image for paper" style="background: #ee582d;"></div>
-                <div class="col-md-9">
+                <div class="col-md-8 col-lg-9">
                     <h5 class="fw-bold">PIP: An Ensemble of Programming-Idiom Predictors</h5>
                     <p class="fw-normal mb-2">M Karl, A W Chadwick, M Erdos, <strong>J Nie, R Antonova</strong>, T
                         Jones, R Mullins. <em>6th Championship Branch Prediction (CBP2025) at the International
@@ -301,9 +310,9 @@
                 </div>
             </div>
             <div class="row align-items-center mt-3 mb-5">
-                <div class="col-md-3"><img class="rounded img-fluid" src="assets/img/collaborators/tidybot.gif"
+                <div class="col-md-4 col-lg-3 mb-2 mb-md-0 pub-thumb"><img class="rounded img-fluid" src="assets/img/collaborators/tidybot.gif"
                         alt="Teaser image for paper"></div>
-                <div class="col-md-9">
+                <div class="col-md-8 col-lg-9">
                     <h5 class="fw-bold">TidyBot: Personalized Robot Assistance with Large Language Models</h5>
                     <p class="fw-normal mb-2">J Wu, <strong>R Antonova</strong>, A Kan, M Lepert, A Zeng, S Song, J
                         Bohg, S Rusinkiewicz, T Funkhouser.&nbsp;<em>IEEE International Conference on Intelligent Robots
@@ -336,9 +345,9 @@
             </div>
 
             <div class="row align-items-center mt-3 mb-5">
-                <div class="col-md-3"><img class="rounded img-fluid" src="assets/img/collaborators/homer.png"
+                <div class="col-md-4 col-lg-3 mb-2 mb-md-0 pub-thumb"><img class="rounded img-fluid" src="assets/img/collaborators/homer.png"
                         alt="Teaser image for HoMeR paper"></div>
-                <div class="col-md-9">
+                <div class="col-md-8 col-lg-9">
                     <h5 class="fw-bold">HoMeR: Learning In-the-Wild Mobile Manipulation via Hybrid Imitation and
                         Whole-Body Control</h5>
                     <p class="fw-normal mb-2">P Sundaresan, R Malhotra, P Miao, J Yang, J Wu, H Hu, <strong>R
@@ -365,9 +374,9 @@
                 </div>
             </div>
             <div class="row align-items-center mt-3 mb-5">
-                <div class="col-md-3"><img class="rounded img-fluid" src="assets/img/collaborators/c-pik.jpg"
+                <div class="col-md-4 col-lg-3 mb-2 mb-md-0 pub-thumb"><img class="rounded img-fluid" src="assets/img/collaborators/c-pik.jpg"
                         alt="Teaser image for paper"></div>
-                <div class="col-md-9">
+                <div class="col-md-8 col-lg-9">
                     <h4 class="fw-bold"><a class="fs-5 text-decoration-none text-dark" href="#">Causal-PIK:
                             Causality-based Physical Reasoning with a Physics-Informed Kernel</a></h4>
                     <p class="fw-normal mb-2">C Morlans, M Yi, C Chen, S Wu, <strong>R Antonova</strong>, T Gerstenberg,
@@ -394,9 +403,9 @@
                 </div>
             </div>
             <div class="row align-items-center mt-3 mb-5">
-                <div class="col-md-3"><img class="rounded img-fluid" src="assets/img/collaborators/mobipi.jpg"
+                <div class="col-md-4 col-lg-3 mb-2 mb-md-0 pub-thumb"><img class="rounded img-fluid" src="assets/img/collaborators/mobipi.jpg"
                         alt="Teaser image for paper"></div>
-                <div class="col-md-9">
+                <div class="col-md-8 col-lg-9">
                     <h4 class="fw-bold"><a class="fs-5 text-decoration-none text-dark" href="#">Mobi-pi: Mobilizing Your
                             Robot Learning Policy</a></h4>
                     <p class="fw-normal mb-2">J Yang, I Huang, B Vu, M Bajracharya, <strong>R Antonova</strong>, J Bohg.
@@ -424,9 +433,9 @@
                 </div>
             </div>
             <div class="row align-items-center mt-3 mb-5">
-                <div class="col-md-3"><img class="rounded img-fluid" src="assets/img/collaborators/cupid.png"
+                <div class="col-md-4 col-lg-3 mb-2 mb-md-0 pub-thumb"><img class="rounded img-fluid" src="assets/img/collaborators/cupid.png"
                         alt="Teaser image for paper"></div>
-                <div class="col-md-9">
+                <div class="col-md-8 col-lg-9">
                     <h5 class="fw-bold">CUPID: Curating Data your Robot Loves with Influence Functions</h5>
                     <p class="fw-normal mb-2">C Agia, R Sinha, J Yang, <strong>R Antonova</strong>, M Pavone, H
                         Nishimura, M Itkina, J Bohg. <em>Conference on Robot Learning (CoRL), 2025</em></p>
@@ -452,9 +461,9 @@
                 </div>
             </div>
             <div class="row align-items-center mt-3 mb-5">
-                <div class="col-md-3"><img class="rounded img-fluid" src="assets/img/collaborators/equibot.jpg"
+                <div class="col-md-4 col-lg-3 mb-2 mb-md-0 pub-thumb"><img class="rounded img-fluid" src="assets/img/collaborators/equibot.jpg"
                         alt="Teaser image for paper"></div>
-                <div class="col-md-9">
+                <div class="col-md-8 col-lg-9">
                     <h5 class="fw-bold">EquiBot: SIM(3)-Equivariant Diffusion Policy for Generalizable and Data
                         Efficient Learning</h5>
                     <p class="fw-normal mb-2">J Yang, Z Cao, C Deng, <strong>R Antonova</strong>, S Song, J
@@ -481,9 +490,9 @@
                 </div>
             </div>
             <div class="row align-items-center mt-3 mb-5">
-                <div class="col-md-3"><img class="rounded img-fluid" src="assets/img/collaborators/sentinel.png"
+                <div class="col-md-4 col-lg-3 mb-2 mb-md-0 pub-thumb"><img class="rounded img-fluid" src="assets/img/collaborators/sentinel.png"
                         alt="Teaser image for paper"></div>
-                <div class="col-md-9">
+                <div class="col-md-8 col-lg-9">
                     <h5 class="fw-bold"><span style="color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity));">Unpacking
                             Failure Modes of Generative Policies: Runtime Monitoring of Consistency and Progress</span>
                     </h5>
@@ -511,9 +520,9 @@
                 </div>
             </div>
             <div class="row align-items-center mt-3 mb-5">
-                <div class="col-md-3"><img class="rounded img-fluid" src="assets/img/collaborators/equivact.png"
+                <div class="col-md-4 col-lg-3 mb-2 mb-md-0 pub-thumb"><img class="rounded img-fluid" src="assets/img/collaborators/equivact.png"
                         alt="Teaser image for paper"></div>
-                <div class="col-md-9">
+                <div class="col-md-8 col-lg-9">
                     <h5 class="fw-bold">EquivAct: SIM(3)-Equivariant Visuomotor Policies beyond Rigid Object
                         Manipulation</h5>
                     <p class="fw-normal mb-2">J Yang, C Deng, J Wu, <strong>R Antonova</strong>, L Guibas, J Bohg.
@@ -541,9 +550,9 @@
                 </div>
             </div>
             <div class="row align-items-center mt-3 mb-5">
-                <div class="col-md-3"><img class="rounded img-fluid" src="assets/img/collaborators/learning-tools.png"
+                <div class="col-md-4 col-lg-3 mb-2 mb-md-0 pub-thumb"><img class="rounded img-fluid" src="assets/img/collaborators/learning-tools.png"
                         alt="Teaser image for paper"></div>
-                <div class="col-md-9">
+                <div class="col-md-8 col-lg-9">
                     <h5 class="fw-bold">Learning Tool Morphology for Contact-Rich Manipulation Tasks with Differentiable
                         Simulation</h5>
                     <p class="fw-normal mb-2">M Li, <strong>R Antonova</strong>, D Sadigh, J Bohg.&nbsp;<em>IEEE
@@ -570,9 +579,9 @@
                 </div>
             </div>
             <div class="row align-items-center mt-3 mb-5">
-                <div class="col-md-3"><img class="rounded img-fluid" src="assets/img/collaborators/inhand.png"
+                <div class="col-md-4 col-lg-3 mb-2 mb-md-0 pub-thumb"><img class="rounded img-fluid" src="assets/img/collaborators/inhand.png"
                         alt="Teaser image for paper"></div>
-                <div class="col-md-9">
+                <div class="col-md-8 col-lg-9">
                     <h5 class="fw-bold">In-Hand Manipulation of Unknown Objects with Tactile Sensing for Insertion</h5>
                     <p class="fw-normal mb-2">C Pan, M Lepert, S Yuan, <strong>R Antonova</strong>, J
                         Bohg.&nbsp;<em>IEEE International Conference on Intelligent Robots and Systems (IROS), 2023</em>
@@ -599,9 +608,9 @@
                 </div>
             </div>
             <div class="row align-items-center mt-3 mb-5">
-                <div class="col-md-3"><img class="rounded img-fluid" src="assets/img/collaborators/rethinking.jpg"
+                <div class="col-md-4 col-lg-3 mb-2 mb-md-0 pub-thumb"><img class="rounded img-fluid" src="assets/img/collaborators/rethinking.jpg"
                         alt="Teaser image for paper"></div>
-                <div class="col-md-9">
+                <div class="col-md-8 col-lg-9">
                     <h5 class="fw-bold">Rethinking Optimization with Differentiable Simulation from a Global Perspective
                     </h5>
                     <p class="fw-normal mb-2"><strong>R Antonova*,</strong> J Yang*, K Jatavallabhula, J
@@ -628,9 +637,9 @@
                 </div>
             </div>
             <div class="row align-items-center mt-3 mb-5">
-                <div class="col-md-3"><img class="rounded img-fluid"
+                <div class="col-md-4 col-lg-3 mb-2 mb-md-0 pub-thumb"><img class="rounded img-fluid"
                         src="assets/img/collaborators/bayesian_treatment.png" alt="Teaser image for paper"></div>
-                <div class="col-md-9">
+                <div class="col-md-8 col-lg-9">
                     <h5 class="fw-bold">A Bayesian Treatment of Real-to-Sim for Deformable Object Manipulation</h5>
                     <p class="fw-normal mb-2"><strong>R Antonova</strong>, J Yang, P Sundaresan, D Fox, F Ramos, J
                         Bohg.&nbsp;<em>IEEE Robotics and Automation Letters (RA-L), 2022</em></p>
@@ -644,9 +653,9 @@
                 </div>
             </div>
             <div class="row align-items-center mt-3 mb-5">
-                <div class="col-md-3"><img class="rounded img-fluid" src="assets/img/collaborators/diffcloud.jpg"
+                <div class="col-md-4 col-lg-3 mb-2 mb-md-0 pub-thumb"><img class="rounded img-fluid" src="assets/img/collaborators/diffcloud.jpg"
                         alt="Teaser image for paper"></div>
-                <div class="col-md-9">
+                <div class="col-md-8 col-lg-9">
                     <h5 class="fw-bold">DiffCloud: Real-to-Sim from Point Clouds with Differentiable Simulation and
                         Rendering of Deformable Objects</h5>
                     <p class="fw-normal mb-2">P Sundaresan, <strong>R Antonova</strong>, J Bohg.&nbsp;<em>IEEE
@@ -673,9 +682,9 @@
                 </div>
             </div>
             <div class="row align-items-center mt-3 mb-5">
-                <div class="col-md-3"><img class="rounded img-fluid"
+                <div class="col-md-4 col-lg-3 mb-2 mb-md-0 pub-thumb"><img class="rounded img-fluid"
                         src="assets/img/collaborators/learningperiodictasks.png" alt="Teaser image for paper"></div>
-                <div class="col-md-9">
+                <div class="col-md-8 col-lg-9">
                     <h5 class="fw-bold">Learning Periodic Tasks from Human Demonstrations</h5>
                     <p class="fw-normal mb-2">J Yang, J Zhang, C Settle, A Rai, <strong>R Antonova</strong>, J
                         Bohg.&nbsp;<em>IEEE International Conference on Robotics and Automation (ICRA), 2022</em></p>
